@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel  App</title>
+</head>
+<body class="body">
+
+    <header>
+        <h1 class="text-center">Travel  App</h1>
+    </header>
+    
+    <div class="input-section">
+        <div class="input-field">
+            <label class="text-center" for="city-entered"><h3>Please enter your the city name</h3></label>
+            <input id="city-entered" class="city-entered" placeholder="destination city" name="city" type="text" required>
+        </div>
+        <div class="input-field">    
+            <label for="date" class="text-center"><h3>enter date of arrival</h3></label>
+            <input type="date" name="date" id="date" class="date" min="0" required>
+        </div>
+        <button class="submit"><h3>Submit</h3></button>
+        <button class="remove"><h3>Remove</h3></button>
+    </div>
+
+
+    <article class="ui-data hide">
+            <h2 class="forecast-date"></h2>
+            <div class="info-list">
+                <ul>
+                    <li class="city-country"></li>
+                    <li class="description"></li>
+                    <li class="temperature"></li>
+                    <li class="rh"></li>
+                    <li class="pres"></li>
+                    <li class="precip"></li>
+                </ul>
+            </div>
+            <img class="city-image" src="" alt="a picture of the destination city">
+            <img class="flag-image" src="" alt="a picture of the country flag">
+
+    </article>
+
+    <h2 class="error hide"></h2>
+
+
+    <footer id="red">
+        <h1 class="text">Made by: Motaz</h1>
+        
+      </footer>
+
+      <script>
+        // Check that service workers are supported
+          if ('serviceWorker' in navigator) {
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('/service-worker.js');
+              });
+          }
+          
+   </script>
+</body>
+</html>
